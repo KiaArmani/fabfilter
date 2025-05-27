@@ -1,0 +1,70 @@
+name: Block Asset
+description: Request to add a specific asset to the blocklist
+title: "[ASSET] Block: "
+labels: ["asset-block", "enhancement"]
+assignees:
+  - KiaArmani
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to fabfilter! Please provide the following information to add a specific asset to the blocklist.
+        
+  - type: input
+    id: asset-name
+    attributes:
+      label: Asset Name
+      description: The exact name of the asset as it appears on fab.com
+      placeholder: e.g., "Ultra Dynamic Sky"
+    validations:
+      required: true
+      
+  - type: input
+    id: asset-url
+    attributes:
+      label: Asset URL
+      description: The full URL to the asset's listing page on fab.com
+      placeholder: e.g., https://fab.com/listings/84fda27a-c79f-49c9-8458-82401fb37cfb
+    validations:
+      required: true
+      
+  - type: input
+    id: creator-name
+    attributes:
+      label: Creator Name
+      description: The name of the creator who made this asset
+      placeholder: e.g., "Everett Gunther"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Blocking
+      description: Why should this specific asset be blocked? (Optional but helpful for context)
+      placeholder: Describe the reason for blocking this asset...
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: I have verified that the asset name and URL are correct
+          required: true
+        - label: I have extracted the correct listing ID from the URL
+          required: true
+        - label: I have checked that this asset is not already in the blocklist
+          required: true
+        - label: I understand this will only block this specific asset, not the entire creator
+          required: true
+          
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note:** Only this specific asset will be blocked. If you want to block all assets from a creator, please use the "Block Creator" template instead.
+        
+        **Listing ID:** The listing ID will be automatically extracted from the URL you provide (the UUID part after `/listings/`). 

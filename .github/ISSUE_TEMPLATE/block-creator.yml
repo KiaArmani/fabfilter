@@ -1,0 +1,57 @@
+name: Block Creator
+description: Request to add a creator to the blocklist
+title: "[CREATOR] Block: "
+labels: ["creator-block", "enhancement"]
+assignees:
+  - KiaArmani
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to fabfilter! Please provide the following information to add a creator to the blocklist.
+        
+  - type: input
+    id: creator-name
+    attributes:
+      label: Creator Name
+      description: The exact name of the creator as it appears on fab.com
+      placeholder: e.g., "John Doe"
+    validations:
+      required: true
+      
+  - type: input
+    id: creator-url
+    attributes:
+      label: Creator Profile URL
+      description: The full URL to the creator's profile page on fab.com
+      placeholder: e.g., https://fab.com/sellers/John%20Doe
+    validations:
+      required: true
+      
+  - type: textarea
+    id: reason
+    attributes:
+      label: Reason for Blocking
+      description: Why should this creator be blocked? (Optional but helpful for context)
+      placeholder: Describe the reason for blocking this creator...
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: Verification
+      description: Please confirm the following
+      options:
+        - label: I have verified that the creator name and URL are correct
+          required: true
+        - label: I understand this will block ALL assets from this creator
+          required: true
+        - label: I have checked that this creator is not already in the blocklist
+          required: true
+          
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        **Note:** The filter will be updated to block all current and future assets from this creator. 

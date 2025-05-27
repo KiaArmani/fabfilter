@@ -1,0 +1,14 @@
+! Title: fabfilter - Block Specific Creators and Assets on fab.com
+! Description: Blocks specific creators by name and specific assets by listing ID on Epic Games' fab.com marketplace
+! Version: 1.1.0
+! Last Modified: 26-05-2025
+! Homepage: https://github.com/KiaArmani/fabfilter
+! License: MIT
+
+! ===== SPECIFIC CREATOR BLOCKING =====
+
+fab.com##.fabkit-Stack-root:has(> .fabkit-Thumbnail-root):has(a[href*="/sellers/Kia%20Armani"])
+
+! ===== SPECIFIC ASSET BLOCKING =====
+
+fab.com##.fabkit-Stack-root:has(> .fabkit-Thumbnail-root):has(a[href*="/listings/61709449-01ea-4d55-9051-7f8f68dd1f1d"])
