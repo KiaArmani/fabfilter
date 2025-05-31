@@ -8,6 +8,8 @@
 ! ===== SPECIFIC CREATOR BLOCKING =====
 
 fab.com##.fabkit-Stack-root:has(> .fabkit-Thumbnail-root):has(a[href*="/sellers/Kia%20Armani"])
+fab.com##.fabkit-Stack-root:has(> .fabkit-Thumbnail-root):has(a[href*="/sellers/warship"])
+
 
 ! ===== SPECIFIC ASSET BLOCKING =====
 
